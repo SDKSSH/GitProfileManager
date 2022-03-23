@@ -14,12 +14,6 @@
         <applicationService serviceImplementation="me.sdkssh.gitprofilemanager.persistents.ProfileSettings"/>
     </extensions>
 
-    <project-components>
-        <component>
-            <implementation-class>me.sdkssh.gitprofilemanager.components.GitProfileProjectComponent
-            </implementation-class>
-        </component>
-    </project-components>
     <actions>
         <action id="me.sdkssh.gitprofilemanager.actions.ChooseProfileAction"
                 class="me.sdkssh.gitprofilemanager.actions.ChooseProfileAction" text="Choose Git Profile"
