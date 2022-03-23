@@ -11,15 +11,9 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="me.sdkssh.gitprofilemanager.persistents.ProfileSettings"/>
     </extensions>
 
-    <application-components>
-        <component>
-            <implementation-class>me.sdkssh.gitprofilemanager.components.GitProfileProjectComponent
-            </implementation-class>
-        </component>
-    </application-components>
     <project-components>
         <component>
             <implementation-class>me.sdkssh.gitprofilemanager.components.GitProfileProjectComponent
