@@ -1,12 +1,10 @@
 <idea-plugin>
-    <id>org.example.GitProfileManager</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>me.sdkssh.GitProfileManager</id>
+    <name>Git Profile Manager</name>
+    <vendor email="sdkssh@sdkssh.me" url="http://www.sdkssh.me">SDKSSH</vendor>
 
-    <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-    ]]></description>
+    <description>Choose your own Git Profile with this plugin
+    Go to Git Tab and click on Choose Git Profile.</description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -16,7 +14,23 @@
         <!-- Add your extensions here -->
     </extensions>
 
+    <application-components>
+        <component>
+            <implementation-class>me.sdkssh.gitprofilemanager.components.GitProfileProjectComponent
+            </implementation-class>
+        </component>
+    </application-components>
+    <project-components>
+        <component>
+            <implementation-class>me.sdkssh.gitprofilemanager.components.GitProfileProjectComponent
+            </implementation-class>
+        </component>
+    </project-components>
     <actions>
-        <!-- Add your actions here -->
+        <action id="me.sdkssh.gitprofilemanager.actions.ChooseProfileAction"
+                class="me.sdkssh.gitprofilemanager.actions.ChooseProfileAction" text="Choose Git Profile"
+                description="Choose your git profile">
+            <add-to-group group-id="VcsNavBarToolbarActions" anchor="first"/>
+        </action>
     </actions>
 </idea-plugin>
